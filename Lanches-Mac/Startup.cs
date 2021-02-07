@@ -27,7 +27,7 @@ namespace Lanches_Mac
         {
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddTransient<ICategoriaRepository, CategoriaRepository>();
-            services.AddTransient<LancheRepository, LancheRepository>();
+            services.AddTransient<ILancheRepository, LancheRepository>();
             services.AddControllersWithViews();
         }
 
